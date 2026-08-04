@@ -1,4 +1,4 @@
-# Rahul Full Stack Internship Repository
+# Pratham Full Stack Internship Repository
 
 **Name:** Pratham Suthar
 
