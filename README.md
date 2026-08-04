@@ -20,7 +20,7 @@ Pratham Suthar
 
 ## Repository Purpose
 
-This repository contains tasks, assignments, and projects completed during my internship.
+This repository is only for learning and practice purpose
 
 ## Folder Structure
 
