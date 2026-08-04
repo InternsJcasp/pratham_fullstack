@@ -1,4 +1,4 @@
-# Rahul Full Stack Internship Repository
+# Full Stack Internship Repository
 
 ## Name
 
@@ -18,17 +18,26 @@ Pratham Suthar
 
 03 August 2026
 
-## Repository Purpose
+## Objectives
 
-This repository is only for learning and practice purpose
+- Learn Git
+- Learn GitHub
+- Practice Version Control
+- Complete Internship Tasks
 
-## Folder Structure
+## Project Structure
 
 frontend/
 
 backend/
 
 docs/
+
+## Git Workflow
+
+- Feature Branch
+- Pull Requests
+- Meaningful Commits
 
 ## Author
 
