@@ -1,0 +1,28 @@
+
+:root {
+  /* color */
+  --primary-color: #2563eb;
+  --secondary-color: #0f172a;
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #f5f5f5;
+
+  /* font family */
+
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Sora', sans-serif;
+
+  /* font size */
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 2rem;
+  --fs-xl: 3rem;
+
+  /* spacing */
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+
+  /* Border radius */
+  --radius: 10px;
+}
