@@ -23,7 +23,7 @@ function sum(arr) {
   return total;
 }
 // space : O(1) and time : O(n)
-
+  
 // Challenges 3:
 function printTriangle(n) {
   for (let i = 1; i <= n; i++) {
