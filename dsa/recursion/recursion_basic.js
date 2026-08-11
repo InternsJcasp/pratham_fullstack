@@ -13,19 +13,6 @@
 }
 
 countDown(5); */
-
-
-// sum of the N number
-
-function sumNumber(n) {
-  if (n === 0) {
-    return 0;
-  }
-
-  return n + sumNumber(n - 1);
-}
-console.log(sumNumber(5));
-
 // print 1 to N
 
 function printNumber(n) {
@@ -75,27 +62,3 @@ function productNum(n) {
   return n * productNum(n - 1);
 }
 console.log('product', productNum(4));
-
-// reverse string
-// version 1:
-function reverseString(str) {
-  if (str.length <= 1) {
-    return str;
-  }
-
-  return reverseString(str.slice(1)) + str[0];
-}
-
-console.log(reverseString('hello'));
-// version 2:
-function reverseString(str, index = str.length - 1) {
-  if (index < 0) {
-    return '';
-  }
-
-  return str[index] + reverseString(str, index - 1);
-}
-
-console.log(reverseString('hello'));
-
-
