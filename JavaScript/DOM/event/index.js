@@ -52,3 +52,20 @@ list.addEventListener('click', (event) => {
     console.log('deleted clicked');
   }
 });
+
+// Click
+button.addEventListener('click', () => {
+  console.log('Clicked');
+});
+// Double Click
+button.addEventListener('dblclick', () => {
+  console.log('Double clicked');
+});
+// Mouse Enter
+box.addEventListener('mouseenter', () => {
+  console.log('Mouse entered');
+});
+// Mouse Leave
+box.addEventListener('mouseleave', () => {
+  console.log('Mouse left');
+});
