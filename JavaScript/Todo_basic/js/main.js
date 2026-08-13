@@ -92,4 +92,3 @@ searchForm.addEventListener('submit', (event) => {
 
   renderTodos(currentTodos);
 });
-
