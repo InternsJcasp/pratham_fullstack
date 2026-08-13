@@ -1,0 +1,96 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-block: 15px;
+}
+.container {
+  margin: auto;
+  max-width: 80vw;
+}
+.logo {
+  font-family: var(--font-primary);
+  font-weight: 800;
+  font-size: 2rem;
+}
+#search-todo {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 5px;
+  margin-block: 25px;
+}
+#search {
+  width: 30vw;
+  padding-inline: 10px;
+  font-size: var(--fs-lg);
+}
+#search-btn {
+  padding: 10px 20px;
+  font-family: var(--font-primary);
+  font-size: var(--fs-md);
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform ease-in 0.3s;
+}
+#search-btn:hover {
+  transform: scale(0.95);
+}
+/* todo align */
+.todo-align {
+  max-width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 15px;
+}
+#add-todo {
+  padding: 10px 20px;
+  font-size: var(--fs-lg);
+  cursor: pointer;
+}
+
+/*  todo card styling */
+#todo-content {
+  max-width: 80vw;
+  margin: auto;
+}
+
+.todolist {
+  list-style: none;
+}
+.todos {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  padding-block: 10px;
+  margin-top: 10px;
+  padding-inline: 10px;
+}
+
+.todos p {
+  margin-block: 5px;
+}
+
+.btns {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+.btns button {
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.filter {
+  max-width: 80vw;
+  margin: auto;
+}
+
+.filter button {
+  padding: 6px 8px;
+  cursor: pointer;
+}

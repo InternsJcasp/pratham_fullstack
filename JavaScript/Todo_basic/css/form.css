@@ -1,0 +1,72 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 420px;
+  }
+  
+  .container h2 {
+    margin-bottom: 20px;
+    color: #333333;
+    text-align: center;
+  }
+  
+
+  #todo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  #todo-form div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+
+  label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555555;
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+  }
+  
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+ button{
+  padding-block: 10px;
+  cursor: pointer;
+  font-size: var(--fs-md);
+ }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📋Todo form</title>
+    <link rel="stylesheet" href="./css/form.css" />
+  </head>
+  <body>
+    <div class="container">
+      <a href="./index.html"><h2>Todo form</h2></a>
+      <form action="" id="todo-form">
+        <!-- title -->
+        <div>
+          <label for="title">Title</label>
+          <input
+            type="text"
+            placeholder="enter the title"
+            name="title"
+            id="title"
+          />
+        </div>
+
+        <!-- description -->
+        <div>
+          <label for="description">Content :</label>
+          <textarea name="description" id="description"> </textarea>
+        </div>
+        <!-- submit btn -->
+        <button type="submit">Submit</button>
+      </form>
+      <p id="error"></p>
+    </div>
+  </body>
+  <script src="./js/form.js"></script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📋Todo App</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <header>
+      <div class="container">
+        <h2 class="logo">📋Todo</h2>
+      </div>
+    </header>
+
+    <!-- hero section -->
+    <main>
+      <section>
+        <form id="search-todo">
+          <input type="text" placeholder="Searching Todo..." id="search" />
+
+          <button type="submit" id="search-btn">Search</button>
+        </form>
+
+        <div class="todo-align">
+          <h2>Let's add your task</h2>
+
+          <a href="form.html">
+            <button id="add-todo">Add Todos</button>
+          </a>
+        </div>
+      </section>
+
+      <!-- Todo List -->
+      <section id="todo-content">
+        <ul class="todolist"></ul>
+      </section>
+    </main>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
