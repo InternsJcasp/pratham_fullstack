@@ -183,3 +183,100 @@ for (let i = 0; i < arr_4.length; i++) {
 }
 
 console.log(arr_4);
+
+// remove the duplicate element in array
+// version 1  : Basic
+function removeDuplicate(arr) {
+  let result = [];
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (result.length === 0 || result.length !== arr[i]) {
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+
+const arr_5 = [1, 1, 2, 2, 3, 3, 4, 5];
+console.log('Remove duplicated element in the array :');
+console.log(removeDuplicate(arr_5));
+// we traverse the array once
+// if n element  -> n iterations
+// Time:O(n) ans Space :O(n) -> n element add in the empty array
+
+// version 2 :
+
+function removeDuplicates(arr) {
+  if (arr.length === 0) {
+    return 0;
+  }
+
+  let i = 0;
+
+  for (let j = 1; j < arr.length; j++) {
+    if (arr[j] !== arr[i]) {
+      i++;
+      arr[i] = arr[j];
+    }
+  }
+
+  return i + 1;
+}
+
+const arr_6 = [1, 1, 2, 2, 3, 3, 4];
+
+const k = removeDuplicates(arr_6);
+
+console.log(k);
+console.log(arr_6.slice(0, k));
+
+// left rotated array in one position
+// version 2 : this is optimized and basic version
+
+function leftRotate(arr) {
+  const first = arr[0];
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    arr[i] = arr[i + 1];
+  }
+
+  arr[arr.length - 1] = first;
+
+  return arr;
+}
+
+const arr_7 = [1, 2, 3, 4, 5];
+console.log('left rotated element :');
+console.log(leftRotate(arr_7));
+
+// time :O(n) --> one for loop n iteration and space : O(1) --> only one variable exist in this code
+//version :
+
+// function leftRotate(arr) {
+//   const first = arr.shift();
+//   arr.push(first);
+
+//   return arr;
+// }
+
+// const rotatedArr = [5, 4, 3, 2, 1];
+// console.log(leftRotate(rotatedArr));
+
+// time :O(1) and space:O(n) n element push in the array
+
+// Check Array is sorted or not
+// version 1
+// function isSortedFunc(arr) {
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     if (arr[i] > arr[i + 1]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// const isSorted = [1, 2, 3, 4];
+// console.log(isSortedFunc(isSorted));
+
+// time : O(n) : one for loop n iteration  and O(1) in this code only one variable is need to solve
+// this is the optimized version
