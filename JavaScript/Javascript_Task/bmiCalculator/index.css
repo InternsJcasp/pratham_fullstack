@@ -1,0 +1,74 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-image: url("./assest/images/image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  background-blend-mode: darken;
+}
+.main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.bmi-container {
+  width: 100%;
+  max-width: 500px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 30px;
+}
+.bmi-container h1 {
+  text-align: center;
+  font-family: "roboto", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.input-group {
+  padding-block: 10px;
+}
+.input-group label {
+  font-family: "roboto", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+#weight {
+  width: 100%;
+  padding-block: 10px;
+  font-size: 1rem;
+  padding-inline: 10px;
+}
+
+#height {
+  width: 100%;
+  padding-block: 10px;
+  font-size: 1rem;
+  padding-inline: 10px;
+}
+
+#calculate-btn {
+  width: 100%;
+  padding-block: 10px;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#result {
+  border: 1px solid rgba(0,0,0,0.4);
+  margin-block: 20px;
+  padding: 10px;
+  line-height: 25px;
+  font-family: "roboto", sans-serif;
+
+}
