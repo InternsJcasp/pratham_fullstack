@@ -49,7 +49,7 @@ function sqrtBinarySearch(n) {
       left = mid + 1; // Look for a larger potential match
     } else {
       right = mid - 1; // mid * mid > n, look in the lower half
-    }
+    }   
   }
 
   return ans;
