@@ -1,0 +1,46 @@
+<!-- Event Delegation — Product List
+
+Imagine you have:
+
+Product List
+│
+├── Laptop       [Add to Cart]
+├── Phone        [Add to Cart]
+├── Headphones   [Add to Cart]
+└── Keyboard     [Add to Cart]
+
+Instead of adding an event listener to every button, we add one listener to the parent. -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Event Delegation</title>
+  </head>
+  <body>
+    <h1>Products</h1>
+
+    <div id="productList">
+      <div class="product">
+        <h2>Laptop</h2>
+        <p>₹50,000</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <h2>Phone</h2>
+        <p>₹30,000</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <h2>Headphones</h2>
+        <p>₹2,000</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!-- Practice: E-Commerce Product Card
+
+Imagine an e-commerce website.
+
+A product card contains:
+
+Product Card
+   ↓
+Product Information
+   ↓
+Add to Cart Button
+
+When the user clicks Add to Cart, the event happens on the button first and then bubbles upward to the product card.
+
+Event flow
+Add to Cart Button
+        ↑
+   Product Info
+        ↑
+   Product Card -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Event Bubbling Practice</title>
+
+    <style>
+      .product-card {
+        width: 300px;
+        padding: 20px;
+        border: 2px solid black;
+        cursor: pointer;
+      }
+
+      .product-info {
+        padding: 20px;
+        background-color: lightgray;
+      }
+
+      button {
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="productCard" class="product-card">
+      <h2>Laptop</h2>
+
+      <div id="productInfo" class="product-info">
+        <p>Price: ₹50,000</p>
+
+        <button id="addCart">Add to Cart</button>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
