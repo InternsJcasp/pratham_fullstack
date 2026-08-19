@@ -1,7 +1,7 @@
 // version 1:
 // basic approached
 //  create a result array empty to store the final result O(n) space
-// intializated the used variable and assign with zero value ( str.length) to count the str
+// intialize the used variable and assign with zero value ( str.length) to count the str
 // when string ith is equal to jth(value) increase the count variable and used assign true when the char is multiple time
 // then push the value in the result
 // then sort the string
