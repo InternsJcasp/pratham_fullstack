@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management Module</title>
+    <link rel="stylesheet" href="./src/css/main.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Header -->
+      <header>
+        <h1>Student Directory</h1>
+        <p>Manage records, filter entries, and view analytics.</p>
+      </header>
+
+      <!-- Stats Summary -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span>Total Students</span>
+          <h3 id="stat-total">0</h3>
+        </div>
+        <div class="stat-card">
+          <span>Average Marks</span>
+          <h3 id="stat-avg">0</h3>
+        </div>
+        <div class="stat-card">
+          <span>Highest Mark</span>
+          <h3 id="stat-highest">0</h3>
+        </div>
+        <div class="stat-card">
+          <span>Lowest Mark</span>
+          <h3 id="stat-lowest">0</h3>
+        </div>
+      </div>
+
+      <!-- Main Workspace -->
+      <div class="dashboard-grid">
+        <aside class="panel">
+          <h2 id="form-title">Add Student</h2>
+          <form id="student-form">
+            <input type="hidden" id="student-id" />
+
+            <div class="form-group">
+              <label for="student-name">Full Name</label>
+              <input
+                type="text"
+                id="student-name"
+                required
+                placeholder="John Doe"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="student-age">Age</label>
+              <input type="number" id="student-age" required placeholder="20" />
+            </div>
+
+            <div class="form-group">
+              <label for="student-course">Course</label>
+              <input
+                type="text"
+                id="student-course"
+                required
+                placeholder="Computer Science"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="student-marks">Marks</label>
+              <input
+                type="number"
+                id="student-marks"
+                required
+                placeholder="85"
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%">
+              Save Student
+            </button>
+          </form>
+        </aside>
+
+        <!-- Main Controls & Table Panel -->
+        <main class="panel">
+          <!-- Controls / Filters -->
+          <div class="toolbar">
+            <input
+              type="text"
+              id="search-name"
+              placeholder="Search by name..."
+            />
+
+            <select id="filter-course">
+              <option value="">All Courses</option>
+            </select>
+
+            <select id="sort-by">
+              <option value="name">Sort by Name</option>
+              <option value="marks-asc">Marks (Low to High)</option>
+              <option value="marks-desc">Marks (High to Low)</option>
+            </select>
+          </div>
+
+          <!-- Student Data Table -->
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Course</th>
+                  <th>Marks</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="student-table-body"></tbody>
+            </table>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>
