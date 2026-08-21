@@ -4,6 +4,8 @@ export function renderTodoForm() {
   const form = document.createElement("form");
   form.className = "todo-form";
 
+  const today = new Date().toISOString().split("T")[0];
+
   form.innerHTML = `
     <input 
       type="text" 
@@ -12,7 +14,7 @@ export function renderTodoForm() {
       required 
     />
  
-   <select id="task-category">
+    <select id="task-category">
       <option value="General">General</option>
       <option value="Work">Work</option>
       <option value="Personal">Personal</option>
@@ -27,6 +29,7 @@ export function renderTodoForm() {
     <input 
       type="date" 
       id="task-due-date" 
+      min="${today}"
     />
 
     <button type="submit">Add Task</button>

@@ -1,17 +1,24 @@
-import { deleteTodo } from "../state/store.js";
-import { toggleTodo } from "../state/store.js";
-import { editTodo } from "../state/store.js";
+import { deleteTodo, toggleTodo, editTodo } from "../state/store.js";
+import { formatDate, isOverdue } from "../utils/helper.js";
+
 export function renderTodoItem(todo) {
   const li = document.createElement("li");
-  li.className = `todo-item priority-${todo.priority.toLowerCase()} ${todo.completed ? "completed" : ""}`;
+
+  // Highlight incomplete, overdue tasks
+  const overdueClass =
+    !todo.completed && isOverdue(todo.dueDate) ? "overdue" : "";
+
+  li.className =
+    `todo-item priority-${todo.priority.toLowerCase()} ${todo.completed ? "completed" : ""} ${overdueClass}`.trim();
   li.dataset.id = todo.id;
+
   li.innerHTML = `
     <div class="todo-main">
       <input type="checkbox" class="toggle-btn" ${todo.completed ? "checked" : ""}>
       <span class="todo-title">${todo.title}</span>
       <span class="badge priority">${todo.priority}</span>
       <span class="badge category">${todo.category}</span>
-      ${todo.dueDate ? `<span class="due-date">📅 ${todo.dueDate}</span>` : ""}
+      ${todo.dueDate ? `<span class="due-date">📅 ${formatDate(todo.dueDate)}</span>` : ""}
     </div>
     <div class="todo-actions">
       <button class="edit-btn">Edit</button>
@@ -29,7 +36,7 @@ export function renderTodoItem(todo) {
     deleteTodo(todo.id);
   });
 
-  // Edit Action (Prompt-based for simple UI)
+  // Edit Action (Prompt-based)
   li.querySelector(".edit-btn").addEventListener("click", () => {
     const newTitle = prompt("Edit task title:", todo.title);
     if (newTitle && newTitle.trim() !== "") {

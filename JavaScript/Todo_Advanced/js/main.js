@@ -3,6 +3,7 @@ import {
   subscribe,
   setSearchQuery,
   setFilterStatus,
+  setSortByDate,
   toggleDarkMode,
   clearCompleted,
   getCompletionPercentage,
@@ -33,7 +34,7 @@ function renderApp() {
   stats.className = "completion-stats";
   stats.innerHTML = `<p>Completed: <strong>${getCompletionPercentage()}%</strong></p>`;
 
-  // Controls (Search & Status Filters)
+  // Controls (Search, Status Filters, & Date Sort)
   const controls = document.createElement("div");
   controls.className = "controls";
   controls.innerHTML = `
@@ -48,6 +49,11 @@ function renderApp() {
       <option value="active" ${state.filterStatus === "active" ? "selected" : ""}>Active</option>
       <option value="completed" ${state.filterStatus === "completed" ? "selected" : ""}>Completed</option>
     </select>
+    <select id="sort-date">
+      <option value="none" ${state.sortByDate === "none" ? "selected" : ""}>Default Order</option>
+      <option value="asc" ${state.sortByDate === "asc" ? "selected" : ""}>Due Date: Oldest First</option>
+      <option value="desc" ${state.sortByDate === "desc" ? "selected" : ""}>Due Date: Newest First</option>
+    </select>
     <button id="clear-completed-btn">Clear Completed</button>
   `;
 
@@ -59,6 +65,9 @@ function renderApp() {
   filterSelect.addEventListener("change", (e) =>
     setFilterStatus(e.target.value),
   );
+
+  const sortSelect = controls.querySelector("#sort-date");
+  sortSelect.addEventListener("change", (e) => setSortByDate(e.target.value));
 
   const clearBtn = controls.querySelector("#clear-completed-btn");
   clearBtn.addEventListener("click", clearCompleted);
@@ -80,7 +89,7 @@ function renderApp() {
     );
   }
 }
-    
+
 // Initial Render & Subscribe to Store Changes
 subscribe(renderApp);
 renderApp();

@@ -1,9 +1,11 @@
 import { loadTodos, saveTodos } from "../service/storage.js";
+
 let state = {
   todos: loadTodos(),
   filterStatus: "all",
   searchQuery: "",
   darkMode: false,
+  sortByDate: "none",
 };
 
 let listeners = [];
@@ -40,6 +42,7 @@ export function addTodo(
   notify();
 }
 
+// Edit Task
 export function editTodo(id, updatedFields) {
   state.todos = state.todos.map((todo) => {
     if (todo.id === id) {
@@ -76,6 +79,12 @@ export function setSearchQuery(query) {
 // Filter by Status
 export function setFilterStatus(status) {
   state.filterStatus = status;
+  notify();
+}
+
+// Sort by Date
+export function setSortByDate(order) {
+  state.sortByDate = order;
   notify();
 }
 
