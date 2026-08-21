@@ -1,68 +1,97 @@
-// The real problem starts when operations depend on each other
-
-// Suppose you have these tasks:
-
 // 1. Get User
-// 2. Get User's Orders
-// 3. Get Order Details
-// 4. Process Payment
-// 5. Send Confirmation
-
-// And each operation depends on the previous one.
-
-// So:
-
-// Get User
-//    ↓
-// Get Orders
-//    ↓
-// Get Order Details
-//    ↓
-// Process Payment
-//    ↓
-// Send Confirmation
-
-// function getProduct(callback) {
-//   setTimeout(() => {
-//     const products = {
-//       id: new Date(),
-//       productsName: "Laptop",
-//       productPrice: "$12350",
-//       isStock: true,
-//     };
-//     callback(products);
-//   });
-// }
-
-// getProduct((products) => {
-//   console.log(products);
-// });
-
 function getUser(callback) {
+  console.log("Getting user...");
+
   setTimeout(() => {
     const user = {
-      id: new Date(),
-      userName: "Pratham Suthar",
-      Active: true,
+      id: 101,
+      name: "Rahul",
     };
+
+    console.log("User received:", user);
+
     callback(user);
-  }, 2000);
+  }, 1000);
 }
 
-function getOrder(userId, callback) {
-  console.log("Getting orders for user", userId);
+// 2. Get Orders
+function getOrders(userId, callback) {
+  console.log("Getting orders for user:", userId);
+
   setTimeout(() => {
-    const order = [{
-        
-    }, {}];
-  });
+    const orders = [
+      {
+        id: 5001,
+        product: "Laptop",
+        price: 50000,
+      },
+      {
+        id: 5002,
+        product: "Mouse",
+        price: 1000,
+      },
+    ];
+
+    console.log("Orders received:", orders);
+
+    callback(orders);
+  }, 1000);
 }
+
+// 3. Get Order Details
+function getOrderDetails(orderId, callback) {
+  console.log("Getting details for order:", orderId);
+
+  setTimeout(() => {
+    const order = {
+      id: orderId,
+      product: "Laptop",
+      price: 50000,
+      quantity: 1,
+    };
+
+    console.log("Order details received:", order);
+
+    callback(order);
+  }, 1000);
+}
+
+// 4. Process Payment
+function processPayment(order, callback) {
+  console.log("Processing payment...");
+
+  setTimeout(() => {
+    const payment = {
+      paymentId: "PAY123",
+      orderId: order.id,
+      amount: order.price,
+      status: "success",
+    };
+
+    console.log("Payment completed:", payment);
+
+    callback(payment);
+  }, 1000);
+}
+
+// 5. Send Confirmation
+function sendConfirmation(payment, callback) {
+  console.log("Sending confirmation...");
+
+  setTimeout(() => {
+    console.log(`Confirmation sent for payment ${payment.paymentId}`);
+
+    callback();
+  }, 1000);
+}
+
+// Start the complete process
 getUser((user) => {
-  getOrder(user.id, (order) => {
-    getOrderDetails(order[0].id, (order) => {
+  getOrders(user.id, (orders) => {
+    getOrderDetails(orders[0].id, (order) => {
       processPayment(order, (payment) => {
-        sendConformation(payment, () => {
-          console.log("Everything complete");
+        sendConfirmation(payment, () => {
+          console.log("Everything completed!");
         });
       });
     });
