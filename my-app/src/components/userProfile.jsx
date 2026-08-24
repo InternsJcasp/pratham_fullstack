@@ -13,7 +13,7 @@ function UserProfile() {
     // Rule 1: Wrapped in Fragment (<>) to return a single root
     <>
       <div
-        className="card"
+        className="flex flex-col item-center justify-center h-auto"
         style={{ border: "1px solid #ccc", padding: "16px" }}
       >
         {/* Rule 2: Self-closing tag */}
