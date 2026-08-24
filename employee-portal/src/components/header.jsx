@@ -10,7 +10,7 @@ export const Header = () => {
           </h1>
           <Navbar />
           <div className="flex items-center  gap-5">
-            <button className="px-4 py-2 active:scale-95 cursor-pointer rounded-md bg-purple-400 text-base font-medium">
+            <button className="px-4 py-2 active:scale-95 text-white cursor-pointer rounded-md bg-purple-400 text-base font-medium">
               Log In
             </button>
           </div>
