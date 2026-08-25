@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className="w-full bg-background py-4 text-center border-t bg-gray-100">
+    <footer className=" w-full bg-background py-4 text-center border-t bg-gray-100">
       <div className=" flex items-center justify-between max-w-7xl mx-auto">
         <h1 className="text-7xl font-bold text-purple-400">Fusion</h1>
         <nav>
