@@ -1,21 +1,37 @@
 import { Footer } from "./components/footer";
 import { Navbar } from "./components/navbar";
-import { Child } from "./components/propsInverse";
+// import { Child } from "./components/propsInverse";
 import UserProfile from "./components/userProfile";
-import { Home } from "./pages/home";
+import EmployeeManager from "./state/employeeManager";
+// import EmployeeForm from "./state/employeeForm";
+// import FormValidation from "./state/formValidation";
+// import LoginFormData from "./state/loginForm";
+// import { FormSubmit } from "./state/formSubmit";
+// import { Home } from "./pages/home";
+// import ShoppingCart from "./state/addToCart";
+// import { LoginFunction } from "./state/login";
 
 //  Basic function based Components (JSX) -> it syntax expression for Javascript created by React that let you write a HTML-like markup directly inside Javascript file
 export const App = () => {
-  const handleMessage = (message) => {
-    console.log(message);
-  };
+  // const handleMessage = (message) => {
+  //   console.log(message);
+  // };
   return (
     <div>
       {/* <h1>Hello World</h1> */}
       <Navbar />
       <UserProfile />
-      <Child sendMessage={handleMessage} />
-      <Home />
+      {/* <Child sendMessage={handleMessage} />
+      <Home /> */}
+      {/* <ShowPassword />
+      <UseForm /> */}
+      {/* <LoginFunction />
+      <ShoppingCart /> */}
+      {/* <FormSubmit /> */}
+      {/* <LoginFormData /> */}
+      {/* <EmployeeForm /> */}
+      {/* <FormValidation /> */}
+      <EmployeeManager />
       <Footer />
     </div>
   );
