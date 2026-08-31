@@ -1,19 +1,25 @@
-import Footer from "./components/layout/footer";
-import Header from "./components/layout/header";
-import Navbar from "./components/layout/navbar";
-import Sidebar from "./components/layout/sidebar";
+import { Routes, Route } from "react-router-dom";
+import RootLayout from "./components/layout/rootLayout";
 import Home from "./pages/home";
+import Employees from "./pages/employees";
+import Department from "./pages/department";
+import Profile from "./pages/profile";
+import About from "./pages/about";
+import Contact from "./pages/contact";
+import NotFound from "./pages/not-found";
 
-export const App = () => {
+export default function App() {
   return (
-    <div className="min-h-screen flex flex-col font-sans text-slate-900 bg-slate-50">
-      <Header />
-      <Navbar />
-      <div className="flex flex-1">
-        <Sidebar />
-        <Home />
-      </div>
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<RootLayout />}>
+        <Route index element={<Home />} />
+        <Route path="employees" element={<Employees />} />
+        <Route path="department" element={<Department />} />
+        <Route path="profile" element={<Profile />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   );
-};
+}
