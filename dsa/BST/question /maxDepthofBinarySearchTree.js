@@ -38,4 +38,4 @@ root.right.right = createNode(18);
 // Find maximum depth
 const result = maxDepth(root);
 
-console.log("Maximum Depth:", result);
+console.log("Maximum Depth:", results);
