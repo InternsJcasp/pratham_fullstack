@@ -25,7 +25,7 @@ function preOrder(root) {
   // 3. Traverse the right subtree
   preOrder(root.right);
 }
-
+  
 // Create the Binary Tree
 const root = createNode(1);
 
