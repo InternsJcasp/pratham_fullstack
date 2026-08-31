@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import Button from "../common/Button";
+
 export default function Header() {
   return (
     <header className="bg-slate-800 w-full text-white px-4 sm:px-6 md:px-8 py-3.5 sm:py-4 flex justify-between items-center shadow-md">
@@ -5,9 +8,21 @@ export default function Header() {
         Employee Portal
       </h1>
 
-      <span className="text-[0.875rem] leading-[1.4] font-semibold bg-slate-700/80 hover:bg-slate-700 text-slate-100 px-3 py-1 rounded-full border border-slate-600/50 transition-colors">
+      {/* <span className="text-[0.875rem] leading-[1.4] font-semibold bg-slate-700/80 hover:bg-slate-700 text-slate-100 px-3 py-1 rounded-full border border-slate-600/50 transition-colors">
         Admin
-      </span>
+      </span> */}
+      <div className="hidden md:flex items-center gap-5">
+        <Link to={"/login"}>
+          <Button className="px-4 py-1 border rounded border-slate-600 hover:bg-slate-700 transition-colors">
+            Login
+          </Button>
+        </Link>
+        <Link to={"/register"}>
+          <Button className="px-4 py-1 border rounded border-slate-600 hover:bg-slate-700 transition-colors">
+            Get Started
+          </Button>
+        </Link>
+      </div>
     </header>
   );
 }

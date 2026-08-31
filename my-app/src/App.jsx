@@ -1,8 +1,10 @@
-import { Footer } from "./components/footer";
 import { Navbar } from "./components/navbar";
 // import { Child } from "./components/propsInverse";
 import UserProfile from "./components/userProfile";
-import EmployeeManager from "./state/employeeManager";
+// import EmployeeManager from "./state/employeeManager";
+import EmployeeRegistration from "./state/empRegistrationForm";
+import JobApplication from "./state/jobApplicationForm";
+// import ProfileImageUploader from "./uncontrolled/fileUpload";
 // import EmployeeForm from "./state/employeeForm";
 // import FormValidation from "./state/formValidation";
 // import LoginFormData from "./state/loginForm";
@@ -31,8 +33,10 @@ export const App = () => {
       {/* <LoginFormData /> */}
       {/* <EmployeeForm /> */}
       {/* <FormValidation /> */}
-      <EmployeeManager />
-      <Footer />
+      {/* <EmployeeManager />
+      <ProfileImageUploader /> */}
+      <EmployeeRegistration />
+      <JobApplication />
     </div>
   );
 };
