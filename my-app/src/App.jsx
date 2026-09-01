@@ -1,58 +1,18 @@
 import { Navbar } from "./components/navbar";
-// import { Child } from "./components/propsInverse";
-import UserProfile from "./components/userProfile";
-// import EmployeeManager from "./state/employeeManager";
-import EmployeeRegistration from "./state/empRegistrationForm";
-import JobApplication from "./state/jobApplicationForm";
-// import ProfileImageUploader from "./uncontrolled/fileUpload";
-// import EmployeeForm from "./state/employeeForm";
-// import FormValidation from "./state/formValidation";
-// import LoginFormData from "./state/loginForm";
-// import { FormSubmit } from "./state/formSubmit";
-// import { Home } from "./pages/home";
-// import ShoppingCart from "./state/addToCart";
-// import { LoginFunction } from "./state/login";
-
-//  Basic function based Components (JSX) -> it syntax expression for Javascript created by React that let you write a HTML-like markup directly inside Javascript file
-export const App = () => {
-  // const handleMessage = (message) => {
-  //   console.log(message);
-  // };
+import ProductList from "./components/productList";
+import { Routes, Route } from "react-router-dom";
+import Cart from "./components/cart";
+function App() {
   return (
-    <div>
-      {/* <h1>Hello World</h1> */}
+    <>
       <Navbar />
-      <UserProfile />
-      {/* <Child sendMessage={handleMessage} />
-      <Home /> */}
-      {/* <ShowPassword />
-      <UseForm /> */}
-      {/* <LoginFunction />
-      <ShoppingCart /> */}
-      {/* <FormSubmit /> */}
-      {/* <LoginFormData /> */}
-      {/* <EmployeeForm /> */}
-      {/* <FormValidation /> */}
-      {/* <EmployeeManager />
-      <ProfileImageUploader /> */}
-      <EmployeeRegistration />
-      <JobApplication />
-    </div>
+
+      <Routes>
+        <Route path="/" element={<ProductList />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+    </>
   );
-};
+}
 
-// ADD Without JSX using the React.createElement()
-// import React from "react";
-
-// export const App = () => {
-//   return React.createElement(
-//     "div",
-//     { className: "container" },
-//     React.createElement("h1", { className: "heading-1" }, "Hello from React"),
-//     React.createElement(
-//       "h2",
-//       { className: "heading-2" },
-//       "Hello from Javascript",
-//     ),
-//   );
-// };
+export default App;
