@@ -1,0 +1,45 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "Bhavik Sharma",
+      "email": "bhavikSharma1232@gmail.com",
+      "department": "IT",
+      "salary": 55000,
+      "phone": "75006400400"
+    },
+    {
+      "name": "Interns JCaspTechnologies",
+      "email": "asdfasd@gamil.com",
+      "phone": "9875237435",
+      "department": "HR",
+      "salary": 45000,
+      "id": "hYN8Ac1boHk"
+    },
+    {
+      "name": "Interns JCaspTechnologies",
+      "email": "asdfasd@gamil.com",
+      "phone": "9875237435",
+      "department": "Marketing",
+      "salary": 45000,
+      "id": "eDFiLWYizsw"
+    },
+    {
+      "name": "Interns JCaspTechnologies",
+      "email": "asdfasd@gamil.com",
+      "phone": "9875237435",
+      "department": "Finance",
+      "salary": 45000,
+      "id": "XfiaNiXwZn4"
+    },
+    {
+      "name": "John Even",
+      "email": "johneven1221@gmail.com",
+      "phone": "77700444770",
+      "department": "Finance",
+      "salary": 20000,
+      "id": "6tV-4YrDaiE"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
