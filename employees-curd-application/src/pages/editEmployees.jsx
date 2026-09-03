@@ -6,6 +6,7 @@ import Loader from "../components/common/loader";
 import ErrorMessage from "../components/common/errorMessage";
 import Button from "../components/common/button";
 import { MoveLeft } from "lucide-react";
+import { EMPLOYEE_MESSAGES } from "../constant/message";
 function EditEmployee() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -36,11 +37,11 @@ function EditEmployee() {
     try {
       setSaving(true);
       await updateEmployee(id, employeeData);
-      alert("Employee updated successfully!");
+      alert(EMPLOYEE_MESSAGES.UPDATED);
       navigate("/employees");
     } catch (error) {
       console.error(error);
-      alert("Failed to update employee.");
+      alert(EMPLOYEE_MESSAGES.FAILED_UPDATE);
     } finally {
       setSaving(false);
     }
@@ -81,7 +82,7 @@ function EditEmployee() {
             size="sm"
             onClick={() => navigate("/employees")}
           >
-            <MoveLeft className="size-5 text-gray-400"/>
+            <MoveLeft className="size-5 text-gray-400" />
             Back
           </Button>
         </div>

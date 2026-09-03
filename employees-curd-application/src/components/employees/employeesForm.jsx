@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { DEPARTMENTS } from "../../utils/constant";
+import { DEPARTMENTS } from "../../constant/constant";
 import Button from "../common/button";
+import { validateEmployee } from "../../utils/validation";
 
 export default function EmployeeForm({ initialData, onSubmit, loading }) {
   const [formData, setFormData] = useState(
@@ -30,14 +31,7 @@ export default function EmployeeForm({ initialData, onSubmit, loading }) {
   };
 
   const validate = () => {
-    const newErrors = {};
-
-    if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.email.trim()) newErrors.email = "Email is required";
-    if (!formData.phone.trim()) newErrors.phone = "Phone is required";
-    if (!formData.department) newErrors.department = "Department is required";
-    if (!formData.salary) newErrors.salary = "Salary is required";
-
+    const newErrors = validateEmployee(formData);
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };

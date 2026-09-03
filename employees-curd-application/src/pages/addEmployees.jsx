@@ -4,6 +4,7 @@ import EmployeeForm from "../components/employees/employeesForm";
 import { createEmployee } from "../services/employeeServices";
 import Button from "../components/common/button";
 import { MoveLeft } from "lucide-react";
+import { EMPLOYEE_MESSAGES } from "../constant/message";
 export default function AddEmployee() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -12,11 +13,11 @@ export default function AddEmployee() {
     try {
       setLoading(true);
       await createEmployee(employeeData);
-      alert("Employee created successfully!");
+      alert(EMPLOYEE_MESSAGES.CREATED);
       navigate("/employees");
     } catch (error) {
       console.error(error);
-      alert("Failed to create employee.");
+      alert(EMPLOYEE_MESSAGES.FETCH_ERROR);
     } finally {
       setLoading(false);
     }
