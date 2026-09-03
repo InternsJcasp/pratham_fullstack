@@ -1,0 +1,83 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "name": "Admin User"
+    }
+  ],
+  "employees": [
+    {
+      "id": "1",
+      "name": "Pratham",
+      "email": "pratham@gmail.com",
+      "role": "Frontend Developer"
+    },
+    {
+      "id": "2",
+      "name": "Bhavik",
+      "email": "bhavik@gmail.com",
+      "role": "Backend Developer"
+    },
+    {
+      "id": "3",
+      "name": "Rahul",
+      "email": "rahul@gmail.com",
+      "role": "UI/UX Designer"
+    },
+    {
+      "id": "4",
+      "name": "Amit",
+      "email": "amit@gmail.com",
+      "role": "React Developer"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Build Login Page",
+      "description": "Create responsive login page using React and Tailwind CSS.",
+      "employeeId": "1",
+      "status": "Completed",
+      "priority": "High",
+      "dueDate": "2026-09-05"
+    },
+    {
+      "id": "2",
+      "title": "Create Employee Dashboard",
+      "description": "Develop employee dashboard with task statistics.",
+      "employeeId": "2",
+      "status": "In Progress",
+      "priority": "High",
+      "dueDate": "2026-09-07"
+    },
+    {
+      "id": "3",
+      "title": "Design Task Cards",
+      "description": "Design reusable task cards for the application.",
+      "employeeId": "3",
+      "status": "Pending",
+      "priority": "Medium",
+      "dueDate": "2026-09-08"
+    },
+    {
+      "id": "4",
+      "title": "API Integration",
+      "description": "Integrate Axios with JSON Server APIs.",
+      "employeeId": "4",
+      "status": "In Progress",
+      "priority": "Medium",
+      "dueDate": "2026-09-10"
+    },
+    {
+      "id": "5",
+      "title": "Testing Application",
+      "description": "Test task creation, editing and deletion functionality.",
+      "employeeId": "1",
+      "status": "Pending",
+      "priority": "Low",
+      "dueDate": "2026-09-12"
+    }
+  ]
+}
