@@ -77,7 +77,7 @@ export default function EmployeeForm({ initialData, onSubmit, loading }) {
         )}
       </div>
 
-      {/* Grid container for Email & Phone */}
+      {/*  Email & Phone */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {/* Email */}
         <div>
