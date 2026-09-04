@@ -1,5 +1,6 @@
 import { useCart } from "../../hooks/useCart";
 import Button from "../common/Button";
+import { Link } from "react-router-dom";
 export default function ProductCards({ products }) {
   const { addToCart } = useCart();
 
@@ -15,16 +16,22 @@ export default function ProductCards({ products }) {
         {products.title}
       </h3>
 
-      <p className="mt-2 font-bold dark:text-white">
-        ${products.price}
-      </p>
+      <p className="mt-2 font-bold dark:text-white">${products.price}</p>
 
-      <Button
-        onClick={() => addToCart(products)}
-        className="mt-3 bg-black px-4 py-2 text-white dark:bg-white dark:text-black"
-      >
-        Add to Cart
-      </Button>
+      <div className="flex items-center justify-center gap-5">
+        <Button
+          onClick={() => addToCart(products)}
+          className="mt-3 bg-black w-full py-2 text-white dark:bg-white dark:text-black"
+        >
+          Add to Cart
+        </Button>
+
+        <Link to={`/products/${products.id}`}>
+          <Button className="mt-3 bg-black px-4 py-2 text-white dark:bg-white dark:text-black">
+            View details
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 }

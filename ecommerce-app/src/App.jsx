@@ -8,6 +8,7 @@ import Checkout from "./pages/Checkout";
 import Layout from "./components/layout/Layout";
 
 import { useAuth } from "./hooks/useAuth";
+import ProductDetails from "./components/products/ProductDetails";
 
 export default function App() {
   const { isAuthenticated, loading } = useAuth();
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/cart" element={<Cart />} />
 
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
       </Route>
 
       {/* Default */}
